@@ -4,7 +4,7 @@ exports.translate = (english: string): Promise<string> => {
   return new Promise((resolve, reject) => {
     const options = {
       body: {
-        english: 'hey',
+        "english": english,
       },
       json: true,
       method: 'POST',
