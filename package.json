@@ -1,15 +1,36 @@
 {
   "name": "wookie",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A CLI Interface for Accessing wookietranslator.com",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperC03/wookie-cli.git"
+  },
+  "keywords": ["Wookie", "Translate"],
+  "author": "Colin C",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^12.7.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
-  }
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.3"
+  },
+  "files": ["lib/*"]
 }
