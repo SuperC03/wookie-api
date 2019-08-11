@@ -19,7 +19,7 @@
     "url": "git+https://github.com/SuperC03/wookie-cli.git"
   },
   "keywords": ["Wookie", "Translate"],
-  "author": "Colin C",
+  "author": "SuperC_03",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^12.7.1",
