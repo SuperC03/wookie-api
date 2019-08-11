@@ -1,5 +1,5 @@
 {
-  "name": "wookie",
+  "name": "wookie-cli",
   "version": "1.0.0",
   "description": "A CLI Interface for Accessing wookietranslator.com",
   "main": "lib/index.js",
